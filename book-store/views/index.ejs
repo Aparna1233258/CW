@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Book Store</title>
+</head>
+<body>
+    <h1><%= storeName %></h1>
+    <% books.forEach(book => { %>
+        <p><%= book.title %> by <%= book.author %></p>
+    <% }) %>
+    <script>
+        console.log("Welcome to My Book Store!");
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Website</title>
+</head>
+<body>
+    <h1><%= message %></h1>
+    <% for(let i = 0; i < places.length; i++) { %>
+        <p>
+            <%= places[i].name %> - <%= places[i].country %>
+        </p>
+        <% if(places[i].isPopular) { %>
+            <p>Popular Destination!</p>
+        <% } %>
+    <% } %>
+    <script>
+        alert("Welcome to Travel World!");
+    </script>
+</body>

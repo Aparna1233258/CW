@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Club Registration</title>
+</head>
+
+<body>
+
+    <h1>Book Club Registration</h1>
+
+    <form action="/createUser" method="post">
+
+        <label>Name</label><br>
+        <input type="text" name="name"><br><br>
+
+        <label>Email</label><br>
+        <input type="text" name="email"><br><br>
+
+        <label>Password</label><br>
+        <input type="password" name="password"><br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+    <% if (errors && errors.length > 0) { %>
+        <ul>
+
+            <% errors.forEach(function(error) { %>
+
+                <li><%= error.msg %></li>
+
+            <% }); %>
+
+        </ul>
+
+    <% } %>
+
+</body>
+
+</html>

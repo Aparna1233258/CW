@@ -1,0 +1,48 @@
+<h1>Product List</h1>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th colspan="2">Action</th>
+</tr>
+
+<% data.forEach(product=>{ %>
+
+<tr>
+
+<td><%= product.name.toUpperCase() %></td>
+
+<td><%= product.description %></td>
+
+<td><%= product.price %></td>
+
+<td>
+<a href="/products/update_product/<%= product._id %>">
+Edit
+</a>
+</td>
+
+<td>
+<a href="/products/delete_product/<%= product._id %>">
+Delete
+</a>
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>
+
+<br>
+
+<% for(let i=1;i<=totalPages;i++){ %>
+
+<a href="/products/retrieve_product?page=<%= i %>">
+<%= i %>
+</a>
+
+<% } %>

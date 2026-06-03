@@ -1,0 +1,25 @@
+<h1>Update Product</h1>
+
+<form action="/products/update_product/<%= product._id %>"
+method="post">
+
+<input type="text"
+name="name"
+value="<%= product.name %>">
+
+<br>
+
+<textarea name="description"><%= product.description %></textarea>
+
+<br>
+
+<input type="number"
+name="price"
+value="<%= product.price %>">
+
+<br>
+
+<input type="submit"
+value="Update Product">
+
+</form>

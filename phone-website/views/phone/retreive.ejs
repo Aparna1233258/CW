@@ -1,0 +1,36 @@
+<h1>Phone List</h1>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th colspan="2">Action</th>
+</tr>
+
+<% data.forEach(phone=>{ %>
+
+<tr>
+
+<td><%= phone.name %></td>
+<td><%= phone.description %></td>
+<td><%= phone.price %></td>
+
+<td>
+<a href="/phones/update_phone/<%= phone._id %>">
+Edit
+</a>
+</td>
+
+<td>
+<a href="/phones/delete_phone/<%= phone._id %>">
+Delete
+</a>
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>

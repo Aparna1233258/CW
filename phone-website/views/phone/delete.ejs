@@ -1,0 +1,13 @@
+<h1>Delete Phone</h1>
+
+<p>Name: <%= phone.name %></p>
+<p>Description: <%= phone.description %></p>
+<p>Price: <%= phone.price %></p>
+
+<form action="/phones/delete_phone/<%= phone._id %>" method="post">
+
+<button type="submit">
+Delete
+</button>
+
+</form>

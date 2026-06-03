@@ -1,0 +1,23 @@
+<h1>Edit Phone</h1>
+
+<form action="/phones/update_phone/<%= phone._id %>" method="post">
+
+<input type="text"
+name="name"
+value="<%= phone.name %>">
+
+<br><br>
+
+<textarea name="description"><%= phone.description %></textarea>
+
+<br><br>
+
+<input type="number"
+name="price"
+value="<%= phone.price %>">
+
+<br><br>
+
+<input type="submit" value="Update Phone">
+
+</form>

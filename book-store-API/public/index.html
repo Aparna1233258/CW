@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+</head>
+<body>
+
+    <h2>Book List</h2>
+
+    <ul id="bookList"></ul>
+
+    <script>
+        fetch('http://localhost:3000/api/retrieve_book_api')
+        .then(response => response.json())
+        .then(result => {
+
+            const books = result.data;
+            const list = document.getElementById('bookList');
+
+            books.forEach(book => {
+
+                const li = document.createElement('li');
+
+                li.innerHTML =
+                `${book.title} -
+                 ${book.author} -
+                 ₹${book.price} -
+                 ${book.inStock ? 'Available' : 'Not Available'}`;
+
+                list.appendChild(li);
+            });
+
+        });
+    </script>
+
+</body>
+</html>
